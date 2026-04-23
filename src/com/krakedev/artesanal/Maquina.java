@@ -4,15 +4,24 @@ package com.krakedev.artesanal;
 public class Maquina {
 	private String nombreCerveza;
 	private String descripcionCerveza;
-	private String codigo;
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double cantidadActual;
+<<<<<<< HEAD
 
 //constructores
 	public Maquina(String codigo, String nombreCerveza, String descripcionCerveza, double precioPorMl,
 			double capacidadMaxima) {
 		this.codigo = codigo;
+=======
+	
+	public Maquina() {
+		
+	}
+	
+
+	public Maquina(String nombreCerveza, String descripcionCerveza, double precioPorMl, double capacidadMaxima) {
+>>>>>>> 4494851f496b89235a27e63849fcf6f841b64ea7
 		this.nombreCerveza = nombreCerveza;
 		this.descripcionCerveza = descripcionCerveza;
 		this.precioPorMl = precioPorMl;
@@ -20,10 +29,15 @@ public class Maquina {
 		// la mquina inicia vacia
 		this.cantidadActual = 0;
 	}
+<<<<<<< HEAD
 
 	// constructores
 	public Maquina(String codigo, String nombreCerveza, String descripcionCerveza, double precioPorMl) {
 		this.codigo = codigo;
+=======
+	
+	public Maquina(String nombreCerveza, String descripcionCerveza, double precioPorMl) {
+>>>>>>> 4494851f496b89235a27e63849fcf6f841b64ea7
 		this.nombreCerveza = nombreCerveza;
 		this.descripcionCerveza = descripcionCerveza;
 		this.precioPorMl = precioPorMl;
@@ -67,6 +81,7 @@ public class Maquina {
 	public double getCantidadActual() {
 		return cantidadActual;
 	}
+<<<<<<< HEAD
 
 	public String getCodigo() {
 		return codigo;
@@ -89,6 +104,51 @@ public class Maquina {
 	public void llenarMaquina() {
 		this.cantidadActual = this.capacidadMaxima - 200;
 
+=======
+	
+	
+
+	public void imprimir() {
+		String mensaje;
+
+		mensaje = "Codigo: " + ",Nombre cerveza:" + nombreCerveza + ", Descripcion:" + descripcionCerveza + ",Precio por Ml:"
+				+ precioPorMl + ", Capacidad Maxima:" + capacidadMaxima + ", Capacidad Actual:" + cantidadActual;
+		System.out.println(mensaje);
+
+	}
+	public void llenarMaquina(){
+		this.cantidadActual = this.capacidadMaxima-100;
+		
+	}
+	
+	public boolean recargarCerveza(double cantidad) {
+		
+		double limitePermitido;
+		limitePermitido=capacidadMaxima-100;
+		if(cantidadActual + cantidad <= limitePermitido) {
+			cantidadActual=cantidadActual + cantidad;
+			return true;
+			
+			
+		}else {
+			return false;
+		}
+		
+	}
+	public double servirCerveza(double cantidad) {
+		if(cantidadActual >=cantidad) {
+			cantidadActual=cantidadActual-cantidad;
+			
+			double valor;
+			valor =cantidad*precioPorMl;
+			return valor;
+			
+		}else {
+			return 0;
+		}
+		
+		
+>>>>>>> 4494851f496b89235a27e63849fcf6f841b64ea7
 	}
 
 	// metodo booleano recargar cerveza: agrega mas cerveza
