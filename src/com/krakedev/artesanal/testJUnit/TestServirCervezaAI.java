@@ -16,7 +16,7 @@ public class TestServirCervezaAI {
      */
     @Test
     public void testServirCervezaCorrectamente() {
-        Maquina maquina = new Maquina("Pilsener", "Rubia", 0.05, 1000);
+        Maquina maquina = new Maquina("005","Pilsener", "Rubia", 0.05, 1000);
 
         maquina.recargarCerveza(500); // cantidad actual = 500
 
@@ -35,7 +35,7 @@ public class TestServirCervezaAI {
      */
     @Test
     public void testNoServirPorFaltaDeCerveza() {
-        Maquina maquina = new Maquina("Pilsener", "Rubia", 0.05, 1000);
+        Maquina maquina = new Maquina("006","Pilsener", "Rubia", 0.05, 1000);
 
         maquina.recargarCerveza(100); // cantidad actual = 100
 
@@ -54,7 +54,7 @@ public class TestServirCervezaAI {
      */
     @Test
     public void testServirCantidadExacta() {
-        Maquina maquina = new Maquina("Pilsener", "Rubia", 0.1, 1000);
+        Maquina maquina = new Maquina("007","Pilsener", "Rubia", 0.1, 1000);
 
         maquina.recargarCerveza(300); // cantidad actual = 300
 
@@ -73,7 +73,7 @@ public class TestServirCervezaAI {
      */
     @Test
     public void testServirConMaquinaVacia() {
-        Maquina maquina = new Maquina("Pilsener", "Rubia", 0.05, 1000);
+        Maquina maquina = new Maquina("008","Pilsener", "Rubia", 0.05, 1000);
 
         double valor = maquina.servirCerveza(100);
 
@@ -90,7 +90,7 @@ public class TestServirCervezaAI {
      */
     @Test
     public void testServirConConstructorSinCapacidad() {
-        Maquina maquina = new Maquina("IPA", "Amarga", 0.08);
+        Maquina maquina = new Maquina("008","IPA", "Amarga", 0.08);
 
         maquina.recargarCerveza(500);
 
@@ -109,7 +109,7 @@ public class TestServirCervezaAI {
      */
     @Test
     public void testServirMasDeLoDisponible() {
-        Maquina maquina = new Maquina("Stout", "Negra", 0.07, 1000);
+        Maquina maquina = new Maquina("009","Stout", "Negra", 0.07, 1000);
 
         maquina.recargarCerveza(250);
 
