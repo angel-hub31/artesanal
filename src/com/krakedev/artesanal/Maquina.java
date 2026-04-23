@@ -3,16 +3,16 @@ package com.krakedev.artesanal;
 public class Maquina {
 	private String nombreCerveza;
 	private String descripcionCerveza;
-	private String codigo;
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double cantidadActual;
 	
-	
+	public Maquina() {
+		
+	}
 	
 
-	public Maquina(String codigo,String nombreCerveza, String descripcionCerveza, double precioPorMl, double capacidadMaxima) {
-		this.codigo=codigo;
+	public Maquina(String nombreCerveza, String descripcionCerveza, double precioPorMl, double capacidadMaxima) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcionCerveza = descripcionCerveza;
 		this.precioPorMl = precioPorMl;
@@ -20,8 +20,7 @@ public class Maquina {
 		this.cantidadActual = 0;
 	}
 	
-	public Maquina(String codigo,String nombreCerveza, String descripcionCerveza, double precioPorMl) {
-		this.codigo=codigo;
+	public Maquina(String nombreCerveza, String descripcionCerveza, double precioPorMl) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcionCerveza = descripcionCerveza;
 		this.precioPorMl = precioPorMl;
@@ -61,29 +60,25 @@ public class Maquina {
 		return cantidadActual;
 	}
 	
-	public String getCodigo() {
-		return codigo;
-	}
-
 	
 
 	public void imprimir() {
 		String mensaje;
 
-		mensaje = "Codigo: " + codigo +",Nombre cerveza:" + nombreCerveza + ", Descripcion:" + descripcionCerveza + ",Precio por Ml:"
+		mensaje = "Codigo: " + ",Nombre cerveza:" + nombreCerveza + ", Descripcion:" + descripcionCerveza + ",Precio por Ml:"
 				+ precioPorMl + ", Capacidad Maxima:" + capacidadMaxima + ", Capacidad Actual:" + cantidadActual;
 		System.out.println(mensaje);
 
 	}
 	public void llenarMaquina(){
-		this.cantidadActual = this.capacidadMaxima-200;
+		this.cantidadActual = this.capacidadMaxima-100;
 		
 	}
 	
 	public boolean recargarCerveza(double cantidad) {
 		
 		double limitePermitido;
-		limitePermitido=capacidadMaxima-200;
+		limitePermitido=capacidadMaxima-100;
 		if(cantidadActual + cantidad <= limitePermitido) {
 			cantidadActual=cantidadActual + cantidad;
 			return true;

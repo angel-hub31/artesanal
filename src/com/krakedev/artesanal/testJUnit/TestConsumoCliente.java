@@ -11,11 +11,11 @@ import com.krakedev.artesanal.Negocio;
 public class TestConsumoCliente {
 	@Test
 	public void probarConsumo() {
-		Maquina maquinaA=new Maquina("l-123","pilsene","rubia",0.002,8000);
+		Maquina maquinaA=new Maquina("pilsene","rubia",0.002,8000);
 		Negocio barDeMoe=new Negocio("bar de moe", maquinaA);
 		Cliente cliente=new Cliente("Angel","1004034391");
 		
-		barDeMoe.cargarMaquina();
+		barDeMoe.cargarMaquinaA();
 		barDeMoe.consumirCervezaMaquinaA(cliente, 100);
 		
 		assertEquals(7800,maquinaA.getCantidadActual(),0.0001);

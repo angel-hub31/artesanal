@@ -9,7 +9,7 @@ import com.krakedev.artesanal.Maquina;
 public class TestLlenarJUnit {
 	@Test
 	public void testLenarMaquina() {
-		Maquina rubia=new Maquina("M-101","Pulsener","cerveza",0.02,8000);
+		Maquina rubia=new Maquina("Pulsener","cerveza",0.02,8000);
 		rubia.llenarMaquina();
 		
 		

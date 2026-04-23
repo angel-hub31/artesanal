@@ -36,7 +36,7 @@ public class Negocio {
 		ultimoCodigo++;
 		
 	}
-	public void cargarMaquina() {
+	public void cargarMaquinaA() {
 		maquinaA.llenarMaquina();
 	}
 	public void consumirCervezaMaquinaA(Cliente cliente, double ml) {
