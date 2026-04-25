@@ -14,6 +14,11 @@ public class TestLlenar {
 		negra.imprimir();
 		negra.llenarMaquina();
 		negra.imprimir();
+		
+		Maquina dorada=new Maquina("l001","cubata","botella",0.04,8000);
+		dorada.imprimir();
+		dorada.llenarMaquina();
+		dorada.imprimir();
 
 
 	}

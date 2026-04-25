@@ -17,6 +17,7 @@ public class TestServir {
 		double valor;
 		valor=rubia.servirCerveza(1000);
 		System.out.println("VALOR A PAGAR:"+valor);
+		rubia.imprimir();
 
 		System.out.println("----------SERVIR 2000 ML--------------");
 		valor=rubia.servirCerveza(2000);
@@ -24,9 +25,34 @@ public class TestServir {
 		rubia.imprimir();
 		
 		System.out.println("----------SERVIR 6000 ML--------------");
-		valor=rubia.servirCerveza(6000);
+		valor=rubia.servirCerveza(1000);
 		System.out.println("VALOR A PAGAR:"+valor);
 		rubia.imprimir();
+		
+		System.out.println("----------SERVIR 2000 ML--------------");
+		valor=rubia.servirCerveza(2000);
+		System.out.println("VALOR A PAGAR:"+valor);
+		rubia.imprimir();
+		
+		System.out.println("----------SERVIR 2000 ML--------------");
+		valor=rubia.servirCerveza(2000);
+		System.out.println("VALOR A PAGAR:"+valor);
+		rubia.imprimir();
+		
+		
+		
+		System.out.println("----------LLENADO MAQUINA--------------");
+		rubia.llenarMaquina();
+		rubia.imprimir();
+
+
+		
+		
+
+		
+		
+		
+		
 
 		
 	}

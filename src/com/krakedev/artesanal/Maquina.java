@@ -114,12 +114,13 @@ public class Maquina {
 		if (cantidadActual >= cantidad) {
 			// si hay suficiente cerveza se descuenta la cantidad
 			cantidadActual = cantidadActual - cantidad;
-// devuelve el costo total
+            // devuelve el costo total
 			double valor;
 			valor = cantidad * precioPorMl;
 			return valor;
 
 		} else {
+			System.out.println("no se puede servir, capacidad al maximo");
 			return 0;
 		}
 	}
