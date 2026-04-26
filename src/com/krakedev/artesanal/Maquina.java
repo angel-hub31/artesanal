@@ -98,6 +98,7 @@ public class Maquina {
 			return valor;
 			
 		}else {
+			System.out.println("limite excedido");
 			return 0;
 		}
 		
