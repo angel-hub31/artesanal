@@ -20,6 +20,15 @@ public class NegocioMejorado {
 		
 		
 	}
+	
+	public void agregarMaquina(String nombreCerveza,String descripcion,double precioPorMl) {
+		String codigoGenerado=generarCodigo();
+		Maquina nuevaMaquina=new Maquina(codigoGenerado,nombreCerveza,descripcion,precioPorMl);
+		this.maquinas.add(nuevaMaquina);
+		
+	}
+	
+	
 	public ArrayList<Maquina> getMaquinas() {
 		return maquinas;
 	}
