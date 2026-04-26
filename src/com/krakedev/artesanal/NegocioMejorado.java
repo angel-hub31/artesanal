@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class NegocioMejorado {
 	
 	private ArrayList<Maquina>maquinas;
-	private ArrayList<Cliente>clientes;
+	private ArrayList<Cliente>clientes=new ArrayList<>();
+	private int ultimoCodigo=0;
 	
 	
 
@@ -60,6 +61,21 @@ public class NegocioMejorado {
 	    
 	    return maquinaEncontrada; 
 	}
+	
+	
+	// parte 2 paso 9
+	public void registrarCliente(String nombre,String cedula) {
+		ultimoCodigo++;
+		Cliente nuevoCliente=new Cliente(nombre,cedula);
+		nuevoCliente.setCodigo(ultimoCodigo);
+		clientes.add(nuevoCliente);
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 	public ArrayList<Maquina> getMaquinas() {
