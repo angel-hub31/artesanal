@@ -82,48 +82,16 @@ public class Maquina {
 		System.out.println(mensaje);
 
 	}
-<<<<<<< HEAD
-	public void llenarMaquina(){
-		this.cantidadActual = this.capacidadMaxima-100;
-		
-	}
 	
-	public boolean recargarCerveza(double cantidad) {
-		
-		double limitePermitido;
-		limitePermitido=capacidadMaxima-100;
-		if(cantidadActual + cantidad <= limitePermitido) {
-			cantidadActual=cantidadActual + cantidad;
-			return true;
-			
-			
-		}else {
-			return false;
-		}
-		
-	}
-	public double servirCerveza(double cantidad) {
-		if(cantidadActual >=cantidad) {
-			cantidadActual=cantidadActual-cantidad;
-			
-			double valor;
-			valor =cantidad*precioPorMl;
-			return valor;
-			
-		}else {
-			System.out.println("limite excedido");
-			return 0;
-		}
+	
 		
 		
-=======
 
 	// metodo llenar maquina: llena la maquina y deja un margen de 200 ml
 	// simula el espacio de seguridad y evita el desbordamiento
 	public void llenarMaquina() {
 		this.cantidadActual = this.capacidadMaxima - 200;
 
->>>>>>> 52ef7c801315c39d589e7ac619ae39e7e854865c
 	}
 
 	// metodo booleano recargar cerveza: agrega mas cerveza

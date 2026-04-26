@@ -10,8 +10,8 @@ public class TestNegocio {
 		// TODO Auto-generated method stub
 		
 		// instanciamos   máquina 
-				Maquina mq = new Maquina("Pilsener", "Cerveza Fria", 0.05, 5000);
-				Maquina ma =new Maquina("club","Premium",0.02,8000);
+				Maquina mq = new Maquina("h123","Pilsener", "Cerveza Fria", 0.05, 5000);
+				Maquina ma =new Maquina("g156","club","Premium",0.02,8000);
 				// instanciamos negocio
 				Negocio cafeArtesanal = new Negocio("Cervecería El Churu", mq);
 				Negocio cafe=new Negocio("TINGO", ma);
