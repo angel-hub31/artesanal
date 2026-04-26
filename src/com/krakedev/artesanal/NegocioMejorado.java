@@ -23,12 +23,16 @@ public class NegocioMejorado {
 	
 	public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
 	    String codigoGenerado = generarCodigo();
-	    
-	    if (recuperarMaquina(codigoGenerado) == null) {
+	 //Usamos recuperarMaquina para ver si ese código ya existe en la lista
+	    Maquina maquinaExistente = recuperarMaquina(codigoGenerado);
+	 // Validación de duplicados
+	    if (maquinaExistente== null) {
+	    	// Si es null, el código es nuevo y podemos agregar la máquina
 	        Maquina nuevaMaquina = new Maquina(codigoGenerado, nombreCerveza, descripcion, precioPorMl);
-	        this.maquinas.add(nuevaMaquina);
+	        maquinas.add(nuevaMaquina);
 	        return true; 
 	    } else {
+	    	// Si no es null, el código ya existe. No agregamos nada
 	        return false; 
 	    }
 	}
