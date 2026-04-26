@@ -14,6 +14,10 @@ public class NegocioMejorado {
 		
 		maquinas = new ArrayList<Maquina>();
 	}
+	
+	public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
 
 	
 	public  String generarCodigo() {
@@ -85,5 +89,9 @@ public class NegocioMejorado {
 	public void setMaquinas(ArrayList<Maquina> maquinas) {
 		this.maquinas = maquinas;
 	}
+	
+	public void setClientes(ArrayList<Cliente> clientes) {
+        this.clientes = clientes;
+    }
 	
 }
