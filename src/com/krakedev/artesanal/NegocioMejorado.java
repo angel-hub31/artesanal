@@ -125,6 +125,19 @@ public class NegocioMejorado {
 	    cliente.setTotalConsumido(nuevoTotal);
 	}
 	
+	public double consultarValoresTotales() {
+		double ventasTotales = 0;
+	    
+	    // Recorremos la lista de clientes
+	    for (int i = 0; i < clientes.size(); i++) {
+	        Cliente c = clientes.get(i);
+	        
+	        ventasTotales = ventasTotales + c.getTotalConsumido();
+	    }
+	    
+	    return ventasTotales;
+	}
+	
 	
 	public ArrayList<Maquina> getMaquinas() {
 		return maquinas;
