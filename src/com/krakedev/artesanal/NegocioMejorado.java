@@ -13,6 +13,13 @@ public class NegocioMejorado {
 		maquinas = new ArrayList<Maquina>();
 	}
 
+	
+	public  String generarCodigo() {
+		int numeroAletorio=(int) (Math.random()*100)+1;
+		return "M-"+numeroAletorio;
+		
+		
+	}
 	public ArrayList<Maquina> getMaquinas() {
 		return maquinas;
 	}
