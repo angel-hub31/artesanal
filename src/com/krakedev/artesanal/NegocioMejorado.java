@@ -28,6 +28,14 @@ public class NegocioMejorado {
 		
 	}
 	
+	public void cargarMaquina() {
+		for (int i = 0; i < maquinas.size(); i++) {
+	        Maquina m = maquinas.get(i);
+	        m.llenarMaquina();
+	    }
+		
+	}
+	
 	
 	public ArrayList<Maquina> getMaquinas() {
 		return maquinas;
