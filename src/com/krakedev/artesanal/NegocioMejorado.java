@@ -21,11 +21,16 @@ public class NegocioMejorado {
 		
 	}
 	
-	public void agregarMaquina(String nombreCerveza,String descripcion,double precioPorMl) {
-		String codigoGenerado=generarCodigo();
-		Maquina nuevaMaquina=new Maquina(codigoGenerado,nombreCerveza,descripcion,precioPorMl);
-		this.maquinas.add(nuevaMaquina);
-		
+	public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+	    String codigoGenerado = generarCodigo();
+	    
+	    if (recuperarMaquina(codigoGenerado) == null) {
+	        Maquina nuevaMaquina = new Maquina(codigoGenerado, nombreCerveza, descripcion, precioPorMl);
+	        this.maquinas.add(nuevaMaquina);
+	        return true; 
+	    } else {
+	        return false; 
+	    }
 	}
 	
 	public void cargarMaquina() {
@@ -34,6 +39,21 @@ public class NegocioMejorado {
 	        m.llenarMaquina();
 	    }
 		
+	}
+	
+	public Maquina recuperarMaquina(String codigo) {
+	    Maquina maquinaEncontrada = null;
+	    
+	    for (int i = 0; i < maquinas.size(); i++) {
+	        Maquina m = maquinas.get(i);
+	        
+	        if (codigo.equals(m.getCodigo())) {
+	            maquinaEncontrada = m;
+	            break; 
+	        }
+	    }
+	    
+	    return maquinaEncontrada; 
 	}
 	
 	
